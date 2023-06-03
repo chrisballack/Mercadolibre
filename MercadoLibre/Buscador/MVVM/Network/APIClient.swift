@@ -13,11 +13,13 @@ class MELIAPIClient {
     
     func Busqueda(Busqueda:String,completion: @escaping (AFDataResponse<Data>?) -> ()) {
         
+        print(EndPoints.Domain+URLGet.Search + Busqueda)
         
         AF.request(EndPoints.Domain+URLGet.Search + Busqueda, method: .get, encoding: JSONEncoding.default).responseData {
             
             (Result) in
             
+            print(Result.debugDescription)
             completion(Result)
         }
         

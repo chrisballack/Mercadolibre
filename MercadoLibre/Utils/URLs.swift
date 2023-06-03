@@ -10,9 +10,9 @@ import Foundation
 //Documento que se encarga de Mantener ordenados los APis que se consumen y los dominios a utilizar
 
 struct EndPoints {
-    static let Domain = "https://api.mercadolibre.com/"
+    static let Domain = "https://api.mercadolibre.com/sites/MLC/"
 }
 
 struct URLGet {
-    static let Search = "MLC/search?q="
+    static let Search = "search?q="
 }

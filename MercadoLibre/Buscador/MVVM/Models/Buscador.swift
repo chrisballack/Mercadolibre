@@ -88,11 +88,8 @@ class BuscadorModel{
         let currency_id : String?
         let order_backend : Int?
         let price : Int?
-        let original_price : Int?
-        let sale_price : String?
         let sold_quantity : Int?
         let available_quantity : Int?
-        let official_store_id : String?
         let use_thumbnail_id : Bool?
         let accepts_mercadopago : Bool?
         let tags : [String]?
@@ -105,11 +102,8 @@ class BuscadorModel{
         let attributes : [Attributes]?
         
         let installments : Installments?
-        let winner_item_id : String?
-        let discounts : String?
+        
         let promotions : [String]?
-        let differential_pricing : Differential_pricing?
-        let inventory_id : String?
 
         enum CodingKeys: String, CodingKey {
 
@@ -128,11 +122,8 @@ class BuscadorModel{
             case currency_id = "currency_id"
             case order_backend = "order_backend"
             case price = "price"
-            case original_price = "original_price"
-            case sale_price = "sale_price"
             case sold_quantity = "sold_quantity"
             case available_quantity = "available_quantity"
-            case official_store_id = "official_store_id"
             case use_thumbnail_id = "use_thumbnail_id"
             case accepts_mercadopago = "accepts_mercadopago"
             case tags = "tags"
@@ -144,11 +135,9 @@ class BuscadorModel{
             case address = "address"
             case attributes = "attributes"
             case installments = "installments"
-            case winner_item_id = "winner_item_id"
-            case discounts = "discounts"
+            
             case promotions = "promotions"
-            case differential_pricing = "differential_pricing"
-            case inventory_id = "inventory_id"
+            
         }
 
         init(from decoder: Decoder) throws {
@@ -168,28 +157,31 @@ class BuscadorModel{
             currency_id = try values.decodeIfPresent(String.self, forKey: .currency_id)
             order_backend = try values.decodeIfPresent(Int.self, forKey: .order_backend)
             price = try values.decodeIfPresent(Int.self, forKey: .price)
-            original_price = try values.decodeIfPresent(Int.self, forKey: .original_price)
-            sale_price = try values.decodeIfPresent(String.self, forKey: .sale_price)
             sold_quantity = try values.decodeIfPresent(Int.self, forKey: .sold_quantity)
             available_quantity = try values.decodeIfPresent(Int.self, forKey: .available_quantity)
-            official_store_id = try values.decodeIfPresent(String.self, forKey: .official_store_id)
             use_thumbnail_id = try values.decodeIfPresent(Bool.self, forKey: .use_thumbnail_id)
             accepts_mercadopago = try values.decodeIfPresent(Bool.self, forKey: .accepts_mercadopago)
             tags = try values.decodeIfPresent([String].self, forKey: .tags)
             variation_filters = try values.decodeIfPresent([String].self, forKey: .variation_filters)
             shipping = try values.decodeIfPresent(Shipping.self, forKey: .shipping)
-            stop_time = try values.decodeIfPresent(String.self, forKey: .stop_time)
+            do{
+                
+                stop_time = try values.decodeIfPresent(String.self, forKey: .stop_time)
+                
+            }catch{
+                
+                stop_time = ""
+                
+            }
+            
             seller = try values.decodeIfPresent(Seller.self, forKey: .seller)
             seller_address = try values.decodeIfPresent(Seller_address.self, forKey: .seller_address)
             address = try values.decodeIfPresent(Address.self, forKey: .address)
             attributes = try values.decodeIfPresent([Attributes].self, forKey: .attributes)
             
             installments = try values.decodeIfPresent(Installments.self, forKey: .installments)
-            winner_item_id = try values.decodeIfPresent(String.self, forKey: .winner_item_id)
-            discounts = try values.decodeIfPresent(String.self, forKey: .discounts)
+            
             promotions = try values.decodeIfPresent([String].self, forKey: .promotions)
-            differential_pricing = try values.decodeIfPresent(Differential_pricing.self, forKey: .differential_pricing)
-            inventory_id = try values.decodeIfPresent(String.self, forKey: .inventory_id)
         }
 
     }
@@ -277,29 +269,13 @@ class BuscadorModel{
         }
 
     }
-
-    struct Differential_pricing : Codable {
-        let id : Int?
-
-        enum CodingKeys: String, CodingKey {
-
-            case id = "id"
-        }
-
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            id = try values.decodeIfPresent(Int.self, forKey: .id)
-        }
-
-    }
-
+    
     struct Shipping : Codable {
         let store_pick_up : Bool?
         let free_shipping : Bool?
         let logistic_type : String?
         let mode : String?
         let tags : [String]?
-        let promise : String?
 
         enum CodingKeys: String, CodingKey {
 
@@ -308,7 +284,6 @@ class BuscadorModel{
             case logistic_type = "logistic_type"
             case mode = "mode"
             case tags = "tags"
-            case promise = "promise"
         }
 
         init(from decoder: Decoder) throws {
@@ -318,7 +293,6 @@ class BuscadorModel{
             logistic_type = try values.decodeIfPresent(String.self, forKey: .logistic_type)
             mode = try values.decodeIfPresent(String.self, forKey: .mode)
             tags = try values.decodeIfPresent([String].self, forKey: .tags)
-            promise = try values.decodeIfPresent(String.self, forKey: .promise)
         }
 
     }
@@ -327,7 +301,6 @@ class BuscadorModel{
         let nickname : String?
         let car_dealer : Bool?
         let real_estate_agency : Bool?
-        
         let registration_date : String?
         let tags : [String]?
         let car_dealer_logo : String?
@@ -341,7 +314,6 @@ class BuscadorModel{
             case nickname = "nickname"
             case car_dealer = "car_dealer"
             case real_estate_agency = "real_estate_agency"
-            
             case registration_date = "registration_date"
             case tags = "tags"
             case car_dealer_logo = "car_dealer_logo"
@@ -356,7 +328,6 @@ class BuscadorModel{
             nickname = try values.decodeIfPresent(String.self, forKey: .nickname)
             car_dealer = try values.decodeIfPresent(Bool.self, forKey: .car_dealer)
             real_estate_agency = try values.decodeIfPresent(Bool.self, forKey: .real_estate_agency)
-            
             registration_date = try values.decodeIfPresent(String.self, forKey: .registration_date)
             tags = try values.decodeIfPresent([String].self, forKey: .tags)
             car_dealer_logo = try values.decodeIfPresent(String.self, forKey: .car_dealer_logo)
@@ -483,10 +454,46 @@ class BuscadorModel{
             value_id = try values.decodeIfPresent(String.self, forKey: .value_id)
             value_name = try values.decodeIfPresent(String.self, forKey: .value_name)
             attribute_group_id = try values.decodeIfPresent(String.self, forKey: .attribute_group_id)
-            attribute_group_name = try values.decodeIfPresent(String.self, forKey: .attribute_group_name)
-            value_struct = try values.decodeIfPresent(String.self, forKey: .value_struct)
-            valuesMELI = try values.decodeIfPresent([Values].self, forKey: .valuesMELI)
-            source = try values.decodeIfPresent(Int.self, forKey: .source)
+            
+            
+            do{
+                attribute_group_name = try values.decodeIfPresent(String.self, forKey: .attribute_group_name)
+                
+            }catch{
+                
+                attribute_group_name = ""
+                
+            }
+            
+            do{
+                value_struct = try values.decodeIfPresent(String.self, forKey: .value_struct)
+                
+            }catch{
+                
+                value_struct = ""
+                
+            }
+            
+            do {
+                
+                valuesMELI = try values.decodeIfPresent([Values].self, forKey: .valuesMELI)
+                
+            }catch{
+                
+                valuesMELI = []
+                
+            }
+            
+            do{
+                source = try values.decodeIfPresent(Int.self, forKey: .source)
+                
+            }catch{
+                
+                source = -1
+                
+            }
+            
+            
             value_type = try values.decodeIfPresent(String.self, forKey: .value_type)
         }
 
@@ -580,7 +587,6 @@ class BuscadorModel{
         let eshop_status_id : Int?
         let site_id : String?
         let eshop_experience : Int?
-        let eshop_rubro : String?
         let eshop_locations : [String]?
         let eshop_logo_url : String?
 
@@ -592,7 +598,6 @@ class BuscadorModel{
             case eshop_status_id = "eshop_status_id"
             case site_id = "site_id"
             case eshop_experience = "eshop_experience"
-            case eshop_rubro = "eshop_rubro"
             case eshop_locations = "eshop_locations"
             case eshop_logo_url = "eshop_logo_url"
         }
@@ -603,10 +608,28 @@ class BuscadorModel{
             seller = try values.decodeIfPresent(Int.self, forKey: .seller)
             nick_name = try values.decodeIfPresent(String.self, forKey: .nick_name)
             eshop_status_id = try values.decodeIfPresent(Int.self, forKey: .eshop_status_id)
-            site_id = try values.decodeIfPresent(String.self, forKey: .site_id)
-            eshop_experience = try values.decodeIfPresent(Int.self, forKey: .eshop_experience)
-            eshop_rubro = try values.decodeIfPresent(String.self, forKey: .eshop_rubro)
-            eshop_locations = try values.decodeIfPresent([String].self, forKey: .eshop_locations)
+            
+            do{
+                site_id = try values.decodeIfPresent(String.self, forKey: .site_id)
+                
+            }catch{
+                site_id = "MLC"
+            }
+            
+            do{
+                eshop_experience = try values.decodeIfPresent(Int.self, forKey: .eshop_experience)
+                
+            }catch{
+                eshop_experience = -1
+            }
+            
+            do{
+                eshop_locations = try values.decodeIfPresent([String].self, forKey: .eshop_locations)
+                
+            }catch{
+                eshop_locations = []
+            }
+            
             eshop_logo_url = try values.decodeIfPresent(String.self, forKey: .eshop_logo_url)
         }
 
@@ -671,9 +694,31 @@ class BuscadorModel{
 
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            negative = try values.decodeIfPresent(Double.self, forKey: .negative)
-            neutral = try values.decodeIfPresent(Double.self, forKey: .neutral)
-            positive = try values.decodeIfPresent(Double.self, forKey: .positive)
+            do{
+                negative = try values.decodeIfPresent(Double.self, forKey: .negative)
+                
+            }catch{
+                negative = 0.0
+                
+            }
+            
+            do{
+                neutral = try values.decodeIfPresent(Double.self, forKey: .neutral)
+                
+            }catch{
+                neutral = 0.0
+                
+            }
+            
+            do{
+                positive = try values.decodeIfPresent(Double.self, forKey: .positive)
+                
+            }catch{
+                positive = 0.0
+                
+            }
+            
+            
         }
 
     }

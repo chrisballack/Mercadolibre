@@ -17,11 +17,13 @@ class BuscadorViewModel {
                 switch Result.result{
                     
                 case .success(_):
+                    
                     if let data = try?
                         JSONDecoder().decode(BuscadorModel.BuscadorData.self, from: Result.data!) as BuscadorModel.BuscadorData {
                         
                         completion(data)
                     }else{
+                        
                         completion(nil)
                     }
                 case .failure(_):
