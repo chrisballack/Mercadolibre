@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4FA9F02A2BB79E008DD46D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4FA9EF2A2BB79E008DD46D /* Colors.xcassets */; };
+		DD4FA9F22A2BBC51008DD46D /* EditViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4FA9F12A2BBC51008DD46D /* EditViews.swift */; };
+		DD4FA9F52A2BBD88008DD46D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DD4FA9F42A2BBD88008DD46D /* Lottie */; };
+		DD4FA9F82A2BBF0A008DD46D /* Animations in Resources */ = {isa = PBXBuildFile; fileRef = DD4FA9F72A2BBF0A008DD46D /* Animations */; };
+		DD4FA9FB2A2BBFA8008DD46D /* EmptystateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4FA9FA2A2BBFA8008DD46D /* EmptystateView.xib */; };
+		DD4FA9FE2A2BC278008DD46D /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4FA9FD2A2BC278008DD46D /* EmptyView.swift */; };
 		DDB3C9722A2BA41200D41F65 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDB3C9712A2BA41200D41F65 /* Alamofire */; };
 		DDB3C9742A2BA42B00D41F65 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3C9732A2BA42B00D41F65 /* URLs.swift */; };
 		DDB3C9792A2BA4F500D41F65 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3C9782A2BA4F500D41F65 /* APIClient.swift */; };
@@ -15,7 +21,7 @@
 		DDB3C9822A2BB44200D41F65 /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB3C9812A2BB44200D41F65 /* ViewModelTest.swift */; };
 		DDBCA86C2A2B9D1B00ACFB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA86B2A2B9D1B00ACFB94 /* AppDelegate.swift */; };
 		DDBCA86E2A2B9D1B00ACFB94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA86D2A2B9D1B00ACFB94 /* SceneDelegate.swift */; };
-		DDBCA8702A2B9D1B00ACFB94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA86F2A2B9D1B00ACFB94 /* ViewController.swift */; };
+		DDBCA8702A2B9D1B00ACFB94 /* BuscadorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCA86F2A2B9D1B00ACFB94 /* BuscadorVC.swift */; };
 		DDBCA8732A2B9D1B00ACFB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA8712A2B9D1B00ACFB94 /* Main.storyboard */; };
 		DDBCA8752A2B9D1C00ACFB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA8742A2B9D1C00ACFB94 /* Assets.xcassets */; };
 		DDBCA8782A2B9D1C00ACFB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBCA8762A2B9D1C00ACFB94 /* LaunchScreen.storyboard */; };
@@ -42,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD4FA9EF2A2BB79E008DD46D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DD4FA9F12A2BBC51008DD46D /* EditViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViews.swift; sourceTree = "<group>"; };
+		DD4FA9F72A2BBF0A008DD46D /* Animations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animations; sourceTree = "<group>"; };
+		DD4FA9FA2A2BBFA8008DD46D /* EmptystateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptystateView.xib; sourceTree = "<group>"; };
+		DD4FA9FD2A2BC278008DD46D /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		DDB3C9732A2BA42B00D41F65 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		DDB3C9782A2BA4F500D41F65 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DDB3C97C2A2BA82700D41F65 /* Buscador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buscador.swift; sourceTree = "<group>"; };
@@ -50,7 +61,7 @@
 		DDBCA8682A2B9D1B00ACFB94 /* MercadoLibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBCA86B2A2B9D1B00ACFB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDBCA86D2A2B9D1B00ACFB94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDBCA86F2A2B9D1B00ACFB94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDBCA86F2A2B9D1B00ACFB94 /* BuscadorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscadorVC.swift; sourceTree = "<group>"; };
 		DDBCA8722A2B9D1B00ACFB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDBCA8742A2B9D1C00ACFB94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDBCA8772A2B9D1C00ACFB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB3C9722A2BA41200D41F65 /* Alamofire in Frameworks */,
+				DD4FA9F52A2BBD88008DD46D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +100,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4FA9F92A2BBF62008DD46D /* UtilsXibsComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DD4FA9FC2A2BC257008DD46D /* EmptyView */,
+			);
+			path = UtilsXibsComponents;
+			sourceTree = "<group>";
+		};
+		DD4FA9FC2A2BC257008DD46D /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				DD4FA9FA2A2BBFA8008DD46D /* EmptystateView.xib */,
+				DD4FA9FD2A2BC278008DD46D /* EmptyView.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
 		DDB3C9752A2BA43A00D41F65 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				DDB3C9732A2BA42B00D41F65 /* URLs.swift */,
+				DD4FA9F12A2BBC51008DD46D /* EditViews.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -125,6 +155,7 @@
 		DDB3C97B2A2BA80700D41F65 /* Buscador */ = {
 			isa = PBXGroup;
 			children = (
+				DDBCA86F2A2B9D1B00ACFB94 /* BuscadorVC.swift */,
 				DDB3C9762A2BA4CC00D41F65 /* MVVM */,
 			);
 			path = Buscador;
@@ -161,15 +192,17 @@
 		DDBCA86A2A2B9D1B00ACFB94 /* MercadoLibre */ = {
 			isa = PBXGroup;
 			children = (
+				DD4FA9F92A2BBF62008DD46D /* UtilsXibsComponents */,
+				DD4FA9F72A2BBF0A008DD46D /* Animations */,
 				DDB3C97B2A2BA80700D41F65 /* Buscador */,
 				DDB3C9752A2BA43A00D41F65 /* Utils */,
 				DDBCA86B2A2B9D1B00ACFB94 /* AppDelegate.swift */,
 				DDBCA86D2A2B9D1B00ACFB94 /* SceneDelegate.swift */,
-				DDBCA86F2A2B9D1B00ACFB94 /* ViewController.swift */,
 				DDBCA8712A2B9D1B00ACFB94 /* Main.storyboard */,
 				DDBCA8742A2B9D1C00ACFB94 /* Assets.xcassets */,
 				DDBCA8762A2B9D1C00ACFB94 /* LaunchScreen.storyboard */,
 				DDBCA8792A2B9D1C00ACFB94 /* Info.plist */,
+				DD4FA9EF2A2BB79E008DD46D /* Colors.xcassets */,
 			);
 			path = MercadoLibre;
 			sourceTree = "<group>";
@@ -210,6 +243,7 @@
 			name = MercadoLibre;
 			packageProductDependencies = (
 				DDB3C9712A2BA41200D41F65 /* Alamofire */,
+				DD4FA9F42A2BBD88008DD46D /* Lottie */,
 			);
 			productName = MercadoLibre;
 			productReference = DDBCA8682A2B9D1B00ACFB94 /* MercadoLibre.app */;
@@ -285,6 +319,7 @@
 			mainGroup = DDBCA85F2A2B9D1B00ACFB94;
 			packageReferences = (
 				DDB3C9702A2BA41200D41F65 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DD4FA9F32A2BBD88008DD46D /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = DDBCA8692A2B9D1B00ACFB94 /* Products */;
 			projectDirPath = "";
@@ -302,8 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4FA9F82A2BBF0A008DD46D /* Animations in Resources */,
 				DDBCA8782A2B9D1C00ACFB94 /* LaunchScreen.storyboard in Resources */,
+				DD4FA9F02A2BB79E008DD46D /* Colors.xcassets in Resources */,
 				DDBCA8752A2B9D1C00ACFB94 /* Assets.xcassets in Resources */,
+				DD4FA9FB2A2BBFA8008DD46D /* EmptystateView.xib in Resources */,
 				DDBCA8732A2B9D1B00ACFB94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,11 +368,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB3C97D2A2BA82700D41F65 /* Buscador.swift in Sources */,
+				DD4FA9FE2A2BC278008DD46D /* EmptyView.swift in Sources */,
 				DDB3C9802A2BB35100D41F65 /* BuscadorViewModel.swift in Sources */,
-				DDBCA8702A2B9D1B00ACFB94 /* ViewController.swift in Sources */,
+				DDBCA8702A2B9D1B00ACFB94 /* BuscadorVC.swift in Sources */,
 				DDBCA86C2A2B9D1B00ACFB94 /* AppDelegate.swift in Sources */,
 				DDBCA86E2A2B9D1B00ACFB94 /* SceneDelegate.swift in Sources */,
 				DDB3C9792A2BA4F500D41F65 /* APIClient.swift in Sources */,
+				DD4FA9F22A2BBC51008DD46D /* EditViews.swift in Sources */,
 				DDB3C9742A2BA42B00D41F65 /* URLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +714,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DD4FA9F32A2BBD88008DD46D /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		DDB3C9702A2BA41200D41F65 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -685,6 +733,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DD4FA9F42A2BBD88008DD46D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD4FA9F32A2BBD88008DD46D /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		DDB3C9712A2BA41200D41F65 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DDB3C9702A2BA41200D41F65 /* XCRemoteSwiftPackageReference "Alamofire" */;
