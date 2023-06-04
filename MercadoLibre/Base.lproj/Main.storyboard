@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tky-F5-U3H">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -89,18 +89,24 @@
                                                                             <constraint firstAttribute="width" constant="25" id="Qqv-nd-NLr"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Busca los productos que deseas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSV-sw-mhE">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Busca los productos que deseas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSV-sw-mhE" customClass="UITextFieldX" customModule="MercadoLibre" customModuleProvider="target">
                                                                         <rect key="frame" x="33" y="0.0" width="242" height="36"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="36" id="JhQ-OJ-U08"/>
                                                                         </constraints>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                                <color key="value" systemColor="systemGrayColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="X7R-Fl-2oi" secondAttribute="bottom" id="6eH-k1-KfD"/>
                                                             <constraint firstAttribute="height" constant="36" id="KhO-Wq-Y64"/>
@@ -147,14 +153,14 @@
                                 <subviews>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NgQ-EY-0bM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="ReJ-G8-lLr"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="1kx-cS-Pdt"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="BGColors"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NgQ-EY-0bM" secondAttribute="trailing" id="Mcq-1R-cMm"/>
                                     <constraint firstItem="NgQ-EY-0bM" firstAttribute="leading" secondItem="kYe-3G-63U" secondAttribute="leading" id="VJN-JI-Dbb"/>
@@ -268,7 +274,7 @@
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c1x-mm-lJn">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="hco-BV-WHM"/>
                                                 </constraints>
@@ -314,7 +320,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lk7-sj-6UF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BGColors"/>
                         <constraints>
                             <constraint firstItem="4Gu-i3-f9C" firstAttribute="trailing" secondItem="lk7-sj-6UF" secondAttribute="trailing" id="197-Zh-zcu"/>
                             <constraint firstItem="lk7-sj-6UF" firstAttribute="trailing" secondItem="3wK-af-PC2" secondAttribute="trailing" id="37w-iw-Q5o"/>
@@ -351,11 +357,17 @@
     <resources>
         <image name="BackArrowWhite" width="64" height="64"/>
         <image name="Loupe" width="64" height="64"/>
+        <namedColor name="BGColors">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrincipalColor">
             <color red="1" green="0.89803921568627454" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -29,6 +29,17 @@ class BuscadorVC: UIViewController,UITextFieldDelegate {
         SetupUI()
         
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        if UIDevice.current.orientation.isLandscape {
+            
+            print("isLandscape")
+            
+        }else{
+            
+            print("other")
+            
+        }
+    }
     
     //Transforma Cambia el frame en caso de que el user rote el dispositivo
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

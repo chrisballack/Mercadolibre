@@ -32,3 +32,16 @@ class UIViewX: UIView {
     }
     
 }
+
+
+@IBDesignable
+class UITextFieldX: UITextField {
+    
+    
+    @IBInspectable public var placeHolderColor: UIColor = UIColor.clear {
+        didSet {
+            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: placeHolderColor])
+        }
+    }
+    
+}

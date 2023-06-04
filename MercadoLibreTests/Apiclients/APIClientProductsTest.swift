@@ -29,7 +29,7 @@ final class APIClientProductsTests: XCTestCase {
     
     func test_Descripcion() throws {
         sut.Description(ItemID: "MLC1142049282") { Result in
-            XCTAssertTrue(Result != nil, "Pude Obtener la info del producto")
+            XCTAssertTrue(Result != nil, "Pude Obtener la info de la Descripcion")
         }
     }
 
