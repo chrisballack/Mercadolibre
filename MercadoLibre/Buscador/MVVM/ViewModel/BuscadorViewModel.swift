@@ -2,7 +2,7 @@
 //  BuscadorViewModel.swift
 //  MercadoLibre
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Foundation
 class BuscadorViewModel {
     func Busqueda(Busqueda:String,completion: @escaping (BuscadorModel.BuscadorData?)->()){
         
-        MELIAPIClient().Busqueda(Busqueda: Busqueda) { (Response) in
+        APIClientBusquedas().Busqueda(Busqueda: Busqueda) { (Response) in
             
             if let Result = Response{
                 

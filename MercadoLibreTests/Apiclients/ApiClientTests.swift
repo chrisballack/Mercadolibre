@@ -2,7 +2,7 @@
 //  MercadoLibreTests.swift
 //  MercadoLibreTests
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import XCTest
@@ -10,10 +10,10 @@ import XCTest
 
 final class ApiClientTests: XCTestCase {
 
-    var sut : MELIAPIClient!
+    var sut : APIClientBusquedas!
     
     override func setUpWithError() throws {
-        sut = MELIAPIClient()
+        sut = APIClientBusquedas()
     }
 
     override func tearDownWithError() throws {

@@ -2,24 +2,23 @@
 //  apiClient.swift
 //  MercadoLibre
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import Foundation
 import Alamofire
 
 
-class MELIAPIClient {
+class APIClientBusquedas {
     
     func Busqueda(Busqueda:String,completion: @escaping (AFDataResponse<Data>?) -> ()) {
         
-        print(EndPoints.Domain+URLGet.Search + Busqueda)
-        
-        AF.request(EndPoints.Domain+URLGet.Search + Busqueda, method: .get, encoding: JSONEncoding.default).responseData {
+        AF.request(EndPoints.Domain+URLGet.Search,
+                   method: .get, parameters: ["q":Busqueda],
+                   encoding: URLEncoding(destination: .queryString)).responseData {
             
             (Result) in
             
-            print(Result.debugDescription)
             completion(Result)
         }
         

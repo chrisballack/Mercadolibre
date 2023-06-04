@@ -2,7 +2,7 @@
 //  Buscador.swift
 //  MercadoLibre
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import Foundation
@@ -261,7 +261,7 @@ class BuscadorModel{
         }
 
         init(from decoder: Decoder) throws {
-            var values = try decoder.container(keyedBy: CodingKeys.self)
+            let values = try decoder.container(keyedBy: CodingKeys.self)
             id = try values.decodeIfPresent(String.self, forKey: .id)
             name = try values.decodeIfPresent(String.self, forKey: .name)
             type = try values.decodeIfPresent(String.self, forKey: .type)

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "compartir.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

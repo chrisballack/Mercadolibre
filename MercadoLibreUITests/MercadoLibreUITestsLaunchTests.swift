@@ -2,7 +2,7 @@
 //  MercadoLibreUITestsLaunchTests.swift
 //  MercadoLibreUITests
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import XCTest

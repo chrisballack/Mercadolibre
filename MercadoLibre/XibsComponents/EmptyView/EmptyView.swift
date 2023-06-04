@@ -2,7 +2,7 @@
 //  EmptyView.swift
 //  MercadoLibre
 //
-//  Created by Maria Fernanda Paz Rodriguez on 3/06/23.
+//  Created by Christians Bonilla on 3/06/23.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ class EmptyView:UIView{
     @IBOutlet weak var Animation: LottieAnimationView!
     @IBOutlet weak var Titles: UILabel!
     
+    //Configuracion para mostrar lottie deseado y mostrar el titulo que tendra la vista
     func SetupView(Animation:String,Title:String){
         
         let animation = LottieAnimation.named(Animation,subdirectory: "Animations")
