@@ -40,7 +40,20 @@ class EmptyViewManager: NSObject {
         if !emptyView.isDescendant(of: Vista){
             
             emptyView = (Bundle.main.loadNibNamed("EmptystateView", owner: Vista)?.first as? EmptyView)!
-            emptyView.frame = CGRect(x: Vista.center.x - (Vista.frame.width/2), y: Vista.center.y - (Vista.frame.height/2), width: Vista.frame.width, height: Vista.frame.height / 2)
+            
+            if UIDevice.current.orientation.isLandscape {
+                
+                if (wasportrait == true){
+                    wasportrait = false
+                    
+                    emptyView.frame = CGRect(x: Vista.center.x - 50, y: Vista.center.y - ((Vista.frame.height + 110 ) / 2), width: Vista.frame.width, height: Vista.frame.height/2 )
+                    
+                }
+                
+            } else {
+                
+                emptyView.frame = CGRect(x: Vista.center.x - (Vista.frame.width/2), y: Vista.center.y - (Vista.frame.height/2), width: Vista.frame.width, height: Vista.frame.height / 2)
+            }
             Vista.addSubview(emptyView)
             
         }

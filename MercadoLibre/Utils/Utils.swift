@@ -7,6 +7,8 @@
 
 import Foundation
 
+var wasportrait = true
+
 class Utils:NSObject{
     
     func Currency(Number:Int) -> String{

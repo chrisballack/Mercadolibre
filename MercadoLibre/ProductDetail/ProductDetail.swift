@@ -23,12 +23,14 @@ class ProductDetail: UIViewController {
     var ItemID:String!
     var Auxrow: Int8! = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewModel = ProductsViewModel()
         emptyView = EmptyViewManager()
-        GetProductInfo()
         setupGestures()
+        GetProductInfo()
+        
     }
     
     //Transforma Cambia el frame en caso de que el user rote el dispositivo
@@ -38,10 +40,15 @@ class ProductDetail: UIViewController {
         let Vista = self.view!
         
             if UIDevice.current.orientation.isLandscape {
+                if (wasportrait == true){
+                    wasportrait = false
+                    
+                    emptyView.emptyView.frame = CGRect(x: Vista.center.x - 50, y: Vista.center.y - ((Vista.frame.height + 110 ) / 2), width: Vista.frame.width, height: Vista.frame.height/2 )
+                    
+                }
                 
-                emptyView.emptyView.frame = CGRect(x: Vista.center.x - 50, y: Vista.center.y - ((Vista.frame.height + 110 ) / 2), width: Vista.frame.width, height: Vista.frame.height/2 )
             } else {
-                
+                wasportrait = true
                 emptyView.emptyView.frame = CGRect(x: Vista.center.x - (Vista.frame.width/2), y: Vista.center.y - (Vista.frame.height/2), width: Vista.frame.height, height: Vista.frame.width / 2)
             }
         }
@@ -55,6 +62,12 @@ class ProductDetail: UIViewController {
     
     //Agrega los swipe gestures al CollectionView
     func setupGestures(){
+        
+        if UIDevice.current.orientation.isLandscape {
+            wasportrait = false
+        } else {
+            wasportrait = true
+        }
         
         CollectionView.register(UINib(nibName: "ImagesCell", bundle: .main), forCellWithReuseIdentifier: "ImagesCell")
         let swipeleft = UISwipeGestureRecognizer(target: self, action: #selector(self.Gesture(gesture:)))

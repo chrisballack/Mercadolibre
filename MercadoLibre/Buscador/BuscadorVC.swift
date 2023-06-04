@@ -38,7 +38,13 @@ class BuscadorVC: UIViewController,UITextFieldDelegate {
         
             if UIDevice.current.orientation.isLandscape {
                 
-                emptyView.emptyView.frame = CGRect(x: Vista.center.x - 50, y: Vista.center.y - ((Vista.frame.height + 110 ) / 2), width: Vista.frame.width, height: Vista.frame.height/2 )
+                if (wasportrait == true){
+                    wasportrait = false
+                    
+                    emptyView.emptyView.frame = CGRect(x: Vista.center.x - 50, y: Vista.center.y - ((Vista.frame.height + 110 ) / 2), width: Vista.frame.width, height: Vista.frame.height/2 )
+                    
+                }
+                
             } else {
                 
                 emptyView.emptyView.frame = CGRect(x: Vista.center.x - (Vista.frame.width/2), y: Vista.center.y - (Vista.frame.height/2), width: Vista.frame.height, height: Vista.frame.width / 2)
@@ -47,6 +53,9 @@ class BuscadorVC: UIViewController,UITextFieldDelegate {
     
     //Configuraciones iniciales de la vista
     func SetupUI(){
+        
+            wasportrait = true
+            
         
         Buscador.delegate = self
         Buscador.addTarget(self, action: #selector(self.myTextFieldDidChange), for: .editingChanged)
@@ -152,6 +161,11 @@ extension BuscadorVC:UITableViewDelegate,UITableViewDataSource{
                 
             }else{
                 
+                if UIDevice.current.orientation.isLandscape {
+                    wasportrait = false
+                } else {
+                    wasportrait = true
+                }
                 Animation = "Noting"
                 Title = "No se encontraron resultados"
                 
